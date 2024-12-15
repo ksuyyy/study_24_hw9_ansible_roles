@@ -1,0 +1,4 @@
+---
+# defaults file for assembly
+dest_folder: /tmp/boxfuse-sample-java-war-hello
+

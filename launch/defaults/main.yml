@@ -1,0 +1,3 @@
+---
+# defaults file for launch
+dest_folder: /var/lib/tomcat9/webapps/

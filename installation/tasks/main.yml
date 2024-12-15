@@ -1,0 +1,9 @@
+---
+# tasks file for installation
+- name: Install packages
+  apt: name={{item}} state=present
+  with_items:
+       - maven
+       - git
+       - default-jdk
+       - tomcat9
