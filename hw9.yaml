@@ -1,0 +1,22 @@
+---
+- name: Install packages
+  hosts: localhost
+  become: yes
+
+  roles:
+    - installation
+
+- name: Assembly app Boxfuse
+  hosts: localhost
+  become: yes
+
+  roles:
+    - assembly
+
+- name: Launch app Boxfuse
+  hosts: web
+  become: yes
+
+  roles:
+    - installation
+    - launch
