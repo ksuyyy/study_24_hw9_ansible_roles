@@ -1,13 +1,13 @@
 ---
 # tasks file for launch
 - name: Transfer WAR File to web
-  copy: 
-   src: /tmp/boxfuse-sample-java-war-hello/target/hello-1.0.war
-   dest: {{ dest_folder }}
+  copy:
+    src: /tmp/boxfuse-sample-java-war-hello/target/hello-1.0.war
+    dest: "{{ dest_folder }}"
 
 - name: Ensure tomcat is present
   service:
-   name: tomcat9
-   state: started
+    name: tomcat9
+    state: started
   notify:
-   - restart tomcat9
+    - restart tomcat9
